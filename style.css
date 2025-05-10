@@ -1,0 +1,263 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Body and background */
+body {
+  font-family: DM Sans, sans-serif;
+  background: linear-gradient(to bottom, #000000, rgb(65, 64, 64));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+/* Container (no frame) */
+.container {
+  padding: 20px 30px;
+  max-width: 350px;
+  width: 90%;
+  animation: fadeIn 1s ease;
+}
+
+/* Profile Image */
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Bio Text */
+.bio h1 {
+  font-family: DM Sans, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #faf4ec;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  margin-bottom: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-wrap: balance;
+}
+
+.bio p {
+  font-family: DM Sans, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #faf4ec;
+  letter-spacing: 0.4px;
+  /* text-wrap: balance; */
+  vertical-align: baseline;
+}
+
+/* Quick Social Icons under bio */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.quick-links a {
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.quick-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Link Buttons */
+.links a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #999;
+  background: rgb(110, 147, 110);
+  color: rgb(250, 244, 236, 1);
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  white-space: normal;
+}
+
+.links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.links a:active {
+  transform: scale(0.98);
+}
+
+.links i {
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.quick-links i {
+  font-size: 24px; /* Smaller for linktr.ee match */
+  font-weight: 0;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #444;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode .links a {
+  background: transparent;
+  border-color: #aaa;
+  color: #fff;
+}
+
+body.dark-mode .links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .quick-links a {
+  border-color: #aaa;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .profile-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bio h1 {
+    font-size: 20px;
+  }
+
+  .bio p {
+    font-size: 12px;
+  }
+
+  .links a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .quick-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 500px;
+    padding: 40px 50px;
+  }
+
+  .profile-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .links a {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .quick-links a {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 450px;
+        padding: 30px 40px;
+    }
+
+    .profile-image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .links a {
+        font-size: 17px;
+        padding: 14px;
+    }
+
+    .quick-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
